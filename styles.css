@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'roboto', Arial;
+}
+
+/* nav bar */
+header {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:solid 1px #474747;
+    width: 80%;
+}
+
+nav h2 {
+    font-size: 24px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav div a {
+    margin-left: 20px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+nav div {
+    margin-right: 10px;
+}
+nav div a:hover {
+    transform: scale(1.2);
+}
