@@ -9,43 +9,55 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
+    color: #474747;
+    background: #F8F8F6;
 }
 
 /* nav bar */
 header {
-    margin-top: 10px;
+
     display: flex;
+    position: sticky;
     width: 100%;
     justify-content: center;
 }
 
 nav {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    border-bottom:solid 1px #474747;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    border-bottom: solid 1px #474747;
     width: 80%;
 }
 
 nav h2 {
-    font-size: 24px;
+    font-size: 40px;
+    font-weight: 800;
     padding: 5px;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #474747;
 }
 
 nav div a {
+    margin-top: 5px;
+    /* Remove when adding responsive design*/
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 32px;
     transition: all 0.3s ease-in-out;
     display: inline-block;
 }
+
 nav div {
     margin-right: 10px;
+    gap: 25px;
+    display: flex;
 }
+
 nav div a:hover {
     transform: translateY(-3px);
 }
@@ -53,23 +65,33 @@ nav div a:hover {
 
 /* hero section */
 #hero {
-    margin-top: 100px;
-    height: 100dvh;
+    margin-top: 25px;
+    padding-bottom: 20px;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid #DBDBDB;
 }
+
 #hero h1 {
-    font-size: 48px;
+    font-size: 128px;
     margin: 20px;
     margin-bottom: 10px;
 }
+
 #hero h3 {
-    font-size: 24px;
-    
-    
-    font-weight: 300;
-    width:fit-content;
+    font-size: 40px;
+
+
+    font-weight: 600;
+    width: fit-content;
+}
+
+#hero p {
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 300px;
 }
 
 #hero #sensations {
@@ -78,5 +100,64 @@ nav div a:hover {
 }
 
 #hero div {
-    width: 80%;
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero #hero-image {
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+
+
+}
+
+#hero img {
+    width: 595px;
+    height: auto;
+    margin-top: 245px;
+    align-self: flex-end;
+    flex-shrink: 3;
+}
+
+
+
+/* quotes section */
+#quotes {
+    min-height: 100dvh;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.quote {
+    font-weight: 300;
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: -0.72px;
+    color: #F9FEFF;
+
+
+}
+
+.border-spacing {
+    margin-top: 150px;
+    padding-top: 25px;
+    border-top: 1px solid black;
+    padding-bottom: 25px;
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+.fukasawa {
+    border-radius: 0 4px 4px 0;
+    background: #394F49;
+    padding: 20px;
+}
+
+.fukasawa p {
+    margin-left: 180px;
 }
