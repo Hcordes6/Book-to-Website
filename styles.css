@@ -141,8 +141,6 @@ nav div a:hover {
     font-style: italic;
     letter-spacing: -0.72px;
     color: #F9FEFF;
-
-
 }
 
 .border-spacing {
@@ -161,5 +159,24 @@ nav div a:hover {
 }
 
 .fukasawa p {
+    margin-left: 180px;
+}
+
+.morrison {
+    border-radius: 4px 0 0 4px;
+    background: #817E9F;
+    padding: 20px;
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.annicchiarico {
+    border-radius: 0 4px 4px 0;
+    background: #ACA885;
+    padding: 20px;
+}
+.annicchiarico p {
     margin-left: 180px;
 }
