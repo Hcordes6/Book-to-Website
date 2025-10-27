@@ -91,7 +91,9 @@ nav div a:hover {
 #hero p {
     font-size: 32px;
     font-weight: 400;
-    margin-top: 300px;
+    margin-top: 25px;
+    align-self: flex-end;
+    
 }
 
 #hero #sensations {
@@ -108,17 +110,17 @@ nav div a:hover {
 
 #hero #hero-image {
     display: flex;
-    align-self: flex-end;
-    position: absolute;
-
-
+    flex-direction: row;
+    justify-content: space-between; 
+    min-width: 100%;
 }
 
 #hero img {
     width: 595px;
     height: auto;
-    margin-top: 245px;
+    margin-top: 20px;
     align-self: flex-end;
+    justify-self: flex-end;
     flex-shrink: 3;
 }
 
