@@ -186,11 +186,16 @@ nav div a:hover {
     text-align: right;
 }
 
+
+
+
+
 /* Explore section */
 #explore {
     display: flex;
     flex-direction: column;
     padding: 100px 50px;
+    border-bottom: 1px solid #DBDBDB;
 }
 
 .explore-container {
@@ -247,4 +252,29 @@ nav div a:hover {
     text-underline-offset: 25%;
     /* 10px */
     text-underline-position: from-font;
+}
+
+
+
+/* essay section */
+#essay-content {
+    display: flex;
+    padding: 100px 50px;
+}
+
+.essay-title {
+    width: 50%;
+    letter-spacing: -1.2px;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 600;
+    margin-right: 50px;
+}
+
+.essay-body {
+    width: 50%;
+    color: #474747;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
 }
