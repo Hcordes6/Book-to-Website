@@ -93,7 +93,7 @@ nav div a:hover {
     font-weight: 400;
     margin-top: 25px;
     align-self: flex-end;
-    
+
 }
 
 #hero #sensations {
@@ -111,12 +111,12 @@ nav div a:hover {
 #hero #hero-image {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
     min-width: 100%;
 }
 
 #hero img {
-    width: 595px;
+    max-width: 595px;
     height: auto;
     margin-top: 20px;
     align-self: flex-end;
@@ -132,6 +132,9 @@ nav div a:hover {
     background: #F2F2F2;
     display: flex;
     flex-direction: column;
+    padding: 75px 0px;
+    gap: 75px;
+    border-bottom: 1px solid #DBDBDB;
 }
 
 
@@ -144,7 +147,6 @@ nav div a:hover {
 }
 
 .border-spacing {
-    margin-top: 150px;
     padding-top: 25px;
     border-top: 1px solid black;
     padding-bottom: 25px;
@@ -159,13 +161,14 @@ nav div a:hover {
 }
 
 .fukasawa p {
-    margin-left: 180px;
+    /* margin-left: 180px; */
+    text-align: right;
 }
 
 .morrison {
     border-radius: 4px 0 0 4px;
     background: #817E9F;
-    padding: 20px;
+    padding: 30px;
 }
 
 .end {
@@ -175,8 +178,73 @@ nav div a:hover {
 .annicchiarico {
     border-radius: 0 4px 4px 0;
     background: #ACA885;
-    padding: 20px;
+    padding: 40px 30px;
 }
+
 .annicchiarico p {
-    margin-left: 180px;
+    /* margin-left: 180px; */
+    text-align: right;
+}
+
+/* Explore section */
+#explore {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 50px;
+}
+
+.explore-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#explore h2 {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 600;
+    padding: 15px;
+    border-bottom: 1px solid #000000;
+}
+
+#explore .button-container {
+    display: flex;
+    width: 60%;
+    height: auto;
+    align-self: center;
+    color: white;
+    margin-top: 50px;
+    background: #2A0800;
+    padding: 35px 25px;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+}
+
+#explore .button-container p {
+    font-size: 48px;
+    font-weight: 700;
+    display: block;
+
+}
+
+.chevron-container svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.read-more {
+    align-self: center;
+    text-align: center;
+    margin-top: 75px;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1.2px;
+    font-style: italic;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: 25%;
+    /* 10px */
+    text-underline-position: from-font;
 }
