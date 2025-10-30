@@ -340,3 +340,23 @@ footer a:hover {
     width: 100%;
     box-sizing: border-box;
 }
+
+
+
+
+
+/* Collection -------------------------------------------------------------- */
+
+.collection-button {
+    display: block;
+    max-width: 100%;
+    padding: 45px;
+    background: #F0EAD6;
+    color: black;
+    font-size: 24px;
+    margin: 0 90px; 
+    box-sizing: border-box;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
