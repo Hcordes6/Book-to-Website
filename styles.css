@@ -332,7 +332,8 @@ footer a:hover {
     float: right;
     /* responsive but bounded image column size */
     width: clamp(260px, 35%, 500px);
-    margin: 0 0 20px 25px; /* gap to the left and bottom for text */
+    margin: 0 0 20px 25px;
+    /* gap to the left and bottom for text */
 }
 
 .gallery-media img {
@@ -342,8 +343,9 @@ footer a:hover {
     object-fit: contain;
 }
 
-.gallery-text p + p {
-    margin-top: 1em; /* spacing between paragraphs */
+.gallery-text p+p {
+    margin-top: 1em;
+    /* spacing between paragraphs */
 }
 
 /* Optional variant for left-floating images if needed later */
@@ -355,17 +357,22 @@ footer a:hover {
 /* Responsive: keep float on small screens, just scale image down */
 @media (max-width: 900px) {
     .gallery-section {
-        padding: 50px 20px; /* slightly tighter gutters on mobile */
+        padding: 50px 20px;
+        /* slightly tighter gutters on mobile */
     }
+
     .gallery-content {
         font-size: 20px;
         line-height: 1.6;
     }
+
     .gallery-media {
-        float: right; /* keep text wrapping */
+        float: right;
+        /* keep text wrapping */
         /* Smaller, responsive image on narrow screens */
         width: clamp(140px, 40vw, 240px);
-        margin: 8px 0 16px 16px; /* tighter gaps around image */
+        margin: 8px 0 16px 16px;
+        /* tighter gaps around image */
     }
 }
 
@@ -376,15 +383,47 @@ footer a:hover {
 /* Collection -------------------------------------------------------------- */
 
 .collection-button {
-    display: block;
-    max-width: 100%;
-    padding: 45px;
+    /* Center the button on the page; space content between label and chevron */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
     background: #F0EAD6;
     color: black;
     font-size: 24px;
-    margin: 0 90px; 
+    /* Span a larger part of the screen and center */
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* center horizontally */
     box-sizing: border-box;
     font-weight: 700;
     border: none;
     cursor: pointer;
+    margin-top: 50px;
+    border-top: 1px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: 5px 6px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.collection-button svg {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+    .collection-button {
+        width: 94%;
+        padding: 28px;
+        font-size: 20px;
+    }
+
+    .collection-button svg {
+        width: 28px;
+        height: 28px;
+    }
 }
