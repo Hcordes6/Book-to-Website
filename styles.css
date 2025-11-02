@@ -415,7 +415,17 @@ footer a:hover {
     flex: 0 0 auto;
 }
 
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 600px) {
+
     .collection-button {
         width: 94%;
         padding: 28px;
@@ -426,4 +436,17 @@ footer a:hover {
         width: 28px;
         height: 28px;
     }
+
+}
+
+@media (max-width: 450px) {
+    nav h2 {
+        font-size: 32px;
+    }
+
+    nav div a {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
 }
