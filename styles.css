@@ -306,39 +306,67 @@ footer a:hover {
 
 /* Gallery -------------------------------------------------------------- */
 
-/* wastepaper */
-
-#wastepaper-basket {
-    display: flex;
-    flex-direction: column;
+/* Generic, reusable gallery section styling */
+.gallery-section {
+    /* same spacing as current section */
     padding: 100px 150px;
-    gap: 25px;
 }
 
-#wastepaper-basket h1 {
+.gallery-section h1 {
     font-size: 48px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
-#wastepaper-basket .image-container img {
+/* Use a block formatting context so floats are contained */
+.gallery-content {
+    display: block;
+    font-size: 24px;
+    line-height: 1.7;
+    /* establish BFC to contain floats without extra clears */
+    overflow: auto;
+}
+
+/* Image floats to the right so text wraps around it */
+.gallery-media {
+    float: right;
+    /* responsive but bounded image column size */
+    width: clamp(260px, 35%, 500px);
+    margin: 0 0 20px 25px; /* gap to the left and bottom for text */
+}
+
+.gallery-media img {
+    display: block;
     width: 100%;
     height: auto;
     object-fit: contain;
-    display: block;
 }
 
-.gallery-content {
-    display: grid;
-    font-size: 24px;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    width: 100%;
-    align-items: start;
+.gallery-text p + p {
+    margin-top: 1em; /* spacing between paragraphs */
 }
 
-.gallery-content > div {
-    width: 100%;
-    box-sizing: border-box;
+/* Optional variant for left-floating images if needed later */
+.gallery-media.left {
+    float: left;
+    margin: 0 25px 20px 0;
+}
+
+/* Responsive: keep float on small screens, just scale image down */
+@media (max-width: 900px) {
+    .gallery-section {
+        padding: 50px 20px; /* slightly tighter gutters on mobile */
+    }
+    .gallery-content {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .gallery-media {
+        float: right; /* keep text wrapping */
+        /* Smaller, responsive image on narrow screens */
+        width: clamp(140px, 40vw, 240px);
+        margin: 8px 0 16px 16px; /* tighter gaps around image */
+    }
 }
 
 
