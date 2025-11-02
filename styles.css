@@ -66,64 +66,121 @@ nav div a:hover {
 /* hero section */
 #hero {
     margin-top: 25px;
-    padding-bottom: 20px;
+    padding: 80px 0 60px 0;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #DBDBDB;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .hero-content {
+    width: 85%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
 }
 
 #hero h1 {
     font-size: 128px;
-    margin: 20px;
-    margin-bottom: 10px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 #hero h3 {
     font-size: 40px;
-
-
     font-weight: 600;
     width: fit-content;
+    margin: 0;
 }
 
 #hero p {
     font-size: 32px;
     font-weight: 400;
-    margin-top: 25px;
-    align-self: flex-end;
-
 }
 
 #hero #sensations {
-    margin: 20px 25px;
-    margin-top: 0px;
+    margin: 0;
 }
 
-#hero div {
-    width: 85%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+#hero #hero-authors {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
 }
 
-#hero #hero-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-width: 100%;
+/* Scattered images in margins - positioned to avoid centered text */
+.hero-scattered-img {
+    position: absolute;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-#hero img {
-    max-width: 595px;
-    height: auto;
-    margin-top: 20px;
-    align-self: flex-end;
-    justify-self: flex-end;
-    flex-shrink: 3;
+.hero-img-1 {
+    top: 8%;
+    right: 5%;
+    width: 200px;
+    transform: rotate(12deg);
 }
 
+.hero-img-2 {
+    top: 10%;
+    left: 4%;
+    width: 120px;
+    transform: rotate(-8deg);
+}
+
+
+.hero-img-3 {
+    top: 48%;
+    right: 3%;
+    width: 140px;
+    transform: rotate(18deg);
+}
+
+
+.hero-img-4 {
+    top: 52%;
+    left: 2%;
+    width: 160px;
+    transform: rotate(-15deg);
+}
+
+
+.hero-img-7 {
+    bottom: 8%;
+    right: 4%;
+    width: 135px;
+    transform: rotate(22deg);
+}
+
+
+.hero-img-8 {
+    bottom: 10%;
+    left: 5%;
+    width: 115px;
+    transform: rotate(-6deg);
+}
+
+.hero-img-9 {
+    top: 18%;
+    left: 50%;
+    transform: rotate(22deg) scale(1.2);
+    width: 130px;
+}
+
+@media (max-width: 750px) {
+
+}
 
 
 /* quotes section */
@@ -418,6 +475,66 @@ footer a:hover {
 
 
 /* Responsive */
+@media (max-width: 750px) {
+    .hero-img-1 {
+        top: 5%;
+        left: 3%;
+        transform: rotate(12deg);
+    }
+
+    .hero-img-2 {
+        top: auto;
+        bottom: 10%;
+        right: 3%;
+    }
+
+    .hero-img-3 {
+        top: auto;
+        left: auto;
+        bottom: 10%;
+        right: 3%;
+    }
+
+    .hero-img-4 {
+        top: auto;
+        left: auto;
+        bottom: 13%;
+        right: 40%;
+    }
+
+    .hero-img-7 {
+        top: 6%;
+        right: 10%;
+        transform: rotate(22deg);
+    }
+
+    .hero-img-8 {
+        display: none;
+    }
+
+    .hero-img-9 {
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%) rotate(5deg);
+    }
+
+    #hero h1 {
+        font-size: 96px;
+    }
+    #hero h3 {
+        font-size: 32px;
+    }
+    #hero p {
+        font-size: 24px;
+    }
+    
+    #hero #hero-authors {
+        position: static;
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 700px) {
     nav {
         flex-direction: column;
