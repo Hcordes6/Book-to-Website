@@ -481,8 +481,8 @@ footer a:hover {
     background: white;
     display: flex;
     flex-direction: column;
-    max-width: 280px;
-    max-height: 325px;
+    width: 280px;
+    height: 325px;
     margin: 50px 30px;
     padding: 20px;
     box-shadow: 0 4px 45.3px -6px rgba(0, 0, 0, 0.25);
