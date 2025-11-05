@@ -408,6 +408,17 @@ footer a:hover {
     margin: 0 25px 20px 0;
 }
 
+.back-to-top {
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 24px;
+}
+
+.back-to-top a {
+
+    color: #474747;
+}
+
 @media (max-width: 900px) {
     .gallery-section {
         padding: 50px 20px;
