@@ -307,7 +307,6 @@ nav div a:hover {
     text-decoration-skip-ink: auto;
     text-decoration-thickness: auto;
     text-underline-offset: 25%;
-    /* 10px */
     text-underline-position: from-font;
 }
 
@@ -363,9 +362,8 @@ footer a:hover {
 
 /* Gallery -------------------------------------------------------------- */
 
-/* Generic, reusable gallery section styling */
+/* section container reusable */
 .gallery-section {
-    /* same spacing as current section */
     padding: 100px 150px;
 }
 
@@ -375,22 +373,21 @@ footer a:hover {
     margin-bottom: 10px;
 }
 
-/* Use a block formatting context so floats are contained */
+/* text content */
 .gallery-content {
     display: block;
     font-size: 24px;
-    line-height: 1.7;
-    /* establish BFC to contain floats without extra clears */
+    line-height: 1.5;
     overflow: auto;
 }
 
-/* Image floats to the right so text wraps around it */
+/* Image */
 .gallery-media {
     float: right;
-    /* responsive but bounded image column size */
-    width: clamp(260px, 35%, 500px);
+    width: 35%;
+    min-width: 260px;
+    max-width: 500px;
     margin: 0 0 20px 25px;
-    /* gap to the left and bottom for text */
 }
 
 .gallery-media img {
@@ -400,22 +397,20 @@ footer a:hover {
     object-fit: contain;
 }
 
+/* spacing between paragraphs */
 .gallery-text p+p {
     margin-top: 1em;
-    /* spacing between paragraphs */
 }
 
-/* Optional variant for left-floating images if needed later */
+/* images float left if needed later */
 .gallery-media.left {
     float: left;
     margin: 0 25px 20px 0;
 }
 
-/* Responsive: keep float on small screens, just scale image down */
 @media (max-width: 900px) {
     .gallery-section {
         padding: 50px 20px;
-        /* slightly tighter gutters on mobile */
     }
 
     .gallery-content {
@@ -425,11 +420,10 @@ footer a:hover {
 
     .gallery-media {
         float: right;
-        /* keep text wrapping */
-        /* Smaller, responsive image on narrow screens */
-        width: clamp(140px, 40vw, 240px);
+        width: 40vw;
+        min-width: 140px;
+        max-width: 240px;
         margin: 8px 0 16px 16px;
-        /* tighter gaps around image */
     }
 }
 
@@ -440,7 +434,6 @@ footer a:hover {
 /* Collection -------------------------------------------------------------- */
 
 .collection-button {
-    /* Center the button on the page; space content between label and chevron */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -448,11 +441,9 @@ footer a:hover {
     background: #F0EAD6;
     color: black;
     font-size: 24px;
-    /* Span a larger part of the screen and center */
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
-    /* center horizontally */
     box-sizing: border-box;
     font-weight: 700;
     border: none;
