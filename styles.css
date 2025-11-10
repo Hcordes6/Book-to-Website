@@ -496,6 +496,7 @@ footer a:hover {
     padding: 20px;
     box-shadow: 0 4px 45.3px -6px rgba(0, 0, 0, 0.25);
     border: 2px solid rgba(0, 0, 0, 0.00);
+    cursor: pointer;
 }
 .index-card:hover {
     border: 2px solid rgba(0, 0, 0, 0.15);
