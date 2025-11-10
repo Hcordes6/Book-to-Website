@@ -524,8 +524,8 @@ footer a:hover {
     .hero-img-4 {
         top: auto;
         left: auto;
-        bottom: 13%;
-        right: 40%;
+        bottom: 5%;
+        right: 35%;
     }
 
     .hero-img-7 {
@@ -539,7 +539,7 @@ footer a:hover {
     }
 
     .hero-img-9 {
-        top: 15%;
+        top: 8%;
         left: 50%;
         transform: translateX(-50%) rotate(5deg);
     }
