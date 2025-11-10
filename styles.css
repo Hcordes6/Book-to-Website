@@ -11,6 +11,8 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     color: #474747;
     background: #F8F8F6;
+    scroll-behavior: smooth;
+    min-width: 320px;
 }
 
 /* nav bar */
