@@ -126,14 +126,14 @@ nav div a:hover {
 }
 
 .hero-img-1 {
-    top: 8%;
+    top: 17%;
     right: 5%;
     width: 200px;
     transform: rotate(12deg);
 }
 
 .hero-img-2 {
-    top: 10%;
+    top: 20%;
     left: 4%;
     width: 120px;
     transform: rotate(-8deg);
@@ -173,9 +173,16 @@ nav div a:hover {
 
 .hero-img-9 {
     top: 18%;
-    left: 50%;
+    left: 55%;
     transform: rotate(22deg) scale(1.2);
     width: 130px;
+}
+
+.hero-img-10 {
+    top: 15%;
+    left: 30%;
+    width: 140px;
+    transform: rotate(-12deg);
 }
 
 @media (max-width: 750px) {
@@ -542,6 +549,10 @@ footer a:hover {
         top: 8%;
         left: 50%;
         transform: translateX(-50%) rotate(5deg);
+    }
+
+    .hero-img-10 {
+        display: none;
     }
 
     #hero h1 {
