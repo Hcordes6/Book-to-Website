@@ -517,6 +517,11 @@ footer a:hover {
     margin-left: 15px;
     transform: scale(1.4);
 }
+@media (max-width: 850px) {
+    .card-container {
+        margin: 50px 20px;
+    }
+}
 
 /* Responsive */
 @media (max-width: 750px) {
