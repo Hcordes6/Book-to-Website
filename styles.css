@@ -212,7 +212,7 @@ nav div a:hover {
 
 @media (max-width: 750px) {
     .hero-scattered-img:hover {
-        transform:none;
+        transform: none;
     }
 }
 
@@ -525,6 +525,7 @@ footer a:hover {
     border: 2px solid rgba(0, 0, 0, 0.00);
     cursor: pointer;
 }
+
 .index-card:hover {
     border: 2px solid rgba(0, 0, 0, 0.15);
 }
@@ -542,6 +543,7 @@ footer a:hover {
     margin-left: 15px;
     transform: scale(1.4);
 }
+
 @media (max-width: 850px) {
     .card-container {
         margin: 50px 20px;
@@ -599,13 +601,15 @@ footer a:hover {
     #hero h1 {
         font-size: 96px;
     }
+
     #hero h3 {
         font-size: 32px;
     }
+
     #hero p {
         font-size: 24px;
     }
-    
+
     #hero #hero-authors {
         position: static;
         margin-top: 30px;
@@ -648,7 +652,7 @@ footer a:hover {
 
 
 
-/* icon-nav (vertical icon bar in the margins) */
+/* icon-nav*/
 #icon-nav {
     position: fixed;
     top: 120px;
@@ -672,6 +676,11 @@ footer a:hover {
     opacity: 0.95;
 }
 
+.nav-icon.citrus-override {
+    width: 75px;
+    height: auto;
+}
+
 .nav-icon:hover {
     transform: scale(1.08);
 }
@@ -682,5 +691,7 @@ footer a:hover {
 }
 
 @media (max-width: 900px) {
-    #icon-nav { display: none; }
+    #icon-nav {
+        display: none;
+    }
 }

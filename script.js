@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				const id = '#' + entry.target.id;
-				const icon = document.querySelector(`.nav-icon[data-target="${id}"]`);
+				const icon = document.querySelectorAll(`.nav-icon[data-target="${id}"]`);
 				if (!icon) return;
 				if (entry.isIntersecting && entry.intersectionRatio > 0.45) {
-					icon.classList.add('active');
+					icon.forEach(i => i.classList.add('active'));
 				} else {
-					icon.classList.remove('active');
+					icon.forEach(i => i.classList.remove('active'));
 				}
 			});
 		}, { root: null, rootMargin: '0px', threshold: [0.45] });
