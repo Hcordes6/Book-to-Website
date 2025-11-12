@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const icons = document.querySelectorAll('.nav-icon');
+	let isScrollingFromClick = false;
 
 	icons.forEach(icon => {
 		icon.addEventListener('click', function () {
@@ -7,8 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (!target) return;
 			const el = document.querySelector(target);
 			if (el) {
+				// Set flag to disable icon-nav auto-scroll
+				isScrollingFromClick = true;
 				el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				history.replaceState(null, '', target);
+				
+				// Clear flag after scroll completes (smooth scroll takes ~500-1000ms)
+				setTimeout(() => {
+					isScrollingFromClick = false;
+				}, 1200);
 			}
 		});
 	});
@@ -27,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					icon.forEach(i => {
 						i.classList.add('active');
 						// Scroll the icon-nav container to show the active icon
-						if (iconNavContainer) {
+						// But only if we're not scrolling from an icon click
+						if (iconNavContainer && !isScrollingFromClick) {
 							const iconTop = i.offsetTop;
 							const iconHeight = i.offsetHeight;
 							const containerHeight = iconNavContainer.clientHeight;
