@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const icons = document.querySelectorAll('.nav-icon');
 	let isScrollingFromClick = false;
+	const iconNav = document.getElementById('icon-nav');
+	const header = document.querySelector('header');
+
+	// Function to check if header is off-screen and adjust icon-nav position
+	function updateIconNavPosition() {
+		if (!iconNav || !header) return;
+		
+		const headerRect = header.getBoundingClientRect();
+		const isHeaderOffScreen = headerRect.bottom < 0;
+		
+		if (isHeaderOffScreen) {
+			iconNav.classList.add('centered');
+		} else {
+			iconNav.classList.remove('centered');
+		}
+	}
+
+	// Initial check
+	updateIconNavPosition();
+
+	// Update on scroll
+	window.addEventListener('scroll', updateIconNavPosition);
 
 	icons.forEach(icon => {
 		icon.addEventListener('click', function () {
