@@ -594,7 +594,11 @@ footer a:hover {
     .card-container {
         margin: 50px 20px;
     }
+    .index-img {
+        height: 80%;
+    }
 }
+
 
 /* Responsive */
 @media (max-width: 750px) {
