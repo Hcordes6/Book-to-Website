@@ -24,6 +24,25 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Update on scroll
 	window.addEventListener('scroll', updateIconNavPosition);
 
+	const iconNavToggle = document.getElementById('icon-nav-toggle');
+	if (iconNavToggle) {
+		iconNavToggle.addEventListener('click', function() {
+			if (iconNav) {
+				iconNav.classList.toggle('mobile-open');
+				iconNavToggle.classList.toggle('active');
+			}
+		});
+
+		document.addEventListener('click', function(e) {
+			if (iconNav && window.innerWidth <= 900) {
+				if (!e.target.closest('#icon-nav') && !e.target.closest('#icon-nav-toggle')) {
+					iconNav.classList.remove('mobile-open');
+					iconNavToggle.classList.remove('active');
+				}
+			}
+		});
+	}
+
 	icons.forEach(icon => {
 		icon.addEventListener('click', function () {
 			const target = this.dataset.target;
