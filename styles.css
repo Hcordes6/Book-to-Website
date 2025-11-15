@@ -268,7 +268,7 @@ nav div a:hover {
 
 .annicchiarico {
     border-radius: 0 4px 4px 0;
-    background: #8597ac9f;
+    background: hsla(212, 81%, 29%, 0.414);
     padding: 40px 30px;
 }
 
@@ -517,7 +517,7 @@ footer a:hover {
     align-items: center;
     padding: 30px;
     background: #F0EAD6;
-    color: black;
+    color: #F8F8F6;
     font-size: 24px;
     width: 80%;
     max-width: 1000px;
@@ -539,6 +539,18 @@ footer a:hover {
     width: 50px;
     height: 50px;
     flex: 0 0 auto;
+}
+
+.containers-collection {
+    background: hsla(212, 81%, 29%, 0.414);
+}
+
+.tools-collection {
+    background: #817e9f9f;
+}
+
+.furniture-collection {
+    background: #394f496d;
 }
 
 /* -----INDEX------------------------------------------------------------------- */
