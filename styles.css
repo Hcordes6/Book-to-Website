@@ -247,7 +247,7 @@ nav div a:hover {
 
 .fukasawa {
     border-radius: 0 4px 4px 0;
-    background: #394F49;
+    background: #394f496d;
     padding: 20px;
 }
 
@@ -258,7 +258,7 @@ nav div a:hover {
 
 .morrison {
     border-radius: 4px 0 0 4px;
-    background: #817E9F;
+    background: #817e9f9f;
     padding: 30px;
 }
 
@@ -268,7 +268,7 @@ nav div a:hover {
 
 .annicchiarico {
     border-radius: 0 4px 4px 0;
-    background: #ACA885;
+    background: #8597ac9f;
     padding: 40px 30px;
 }
 
@@ -545,7 +545,7 @@ footer a:hover {
 
 
 .index-card {
-    background: white;
+    background: #F8F8F6;
     text-align: left;
     font-size: 16px;
     display: flex;
@@ -554,13 +554,17 @@ footer a:hover {
     height: 300px;
     margin: 20px 10px;
     padding: 20px;
-    box-shadow: 0 4px 15px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     border: 2px solid rgba(0, 0, 0, 0.00);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
+
+
 .index-card:hover {
-    border: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
 }
 
 .index-img {
@@ -594,6 +598,7 @@ footer a:hover {
     .card-container {
         margin: 50px 20px;
     }
+
     .index-img {
         height: 80%;
     }
