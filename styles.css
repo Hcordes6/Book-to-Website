@@ -474,13 +474,17 @@ footer a:hover {
 
 /* section container reusable */
 .gallery-section {
-    padding: 100px 150px;
+    padding: 75px 150px;
 }
 
 .gallery-section h1 {
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .gallery-text h1 {
@@ -535,7 +539,7 @@ footer a:hover {
 
 @media (max-width: 900px) {
     .gallery-section {
-        padding: 50px 20px;
+        padding: 30px 20px;
     }
 
     .gallery-content {
@@ -557,6 +561,42 @@ footer a:hover {
 
 
 /* Collection -------------------------------------------------------------- */
+
+.collections-outline {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.collection-key-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.collection-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.containers-dot {
+    background: hsla(212, 81%, 29%, 0.414);
+}
+
+.tools-dot {
+    background: #817e9f9f;
+}
+
+.furniture-dot {
+    background: #394f496d;
+}
 
 .collection-button {
     display: flex;
