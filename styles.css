@@ -666,6 +666,21 @@ footer a:hover {
     transform: translateY(-5px);
 }
 
+.index-card[data-category="containers"]:hover h2 {
+    color: hsl(212, 81%, 29%);
+    transition: color 0.3s ease;
+}
+
+.index-card[data-category="tools"]:hover h2 {
+    color: #817e9f;
+    transition: color 0.3s ease;
+}
+
+.index-card[data-category="furniture"]:hover h2 {
+    color: #394f496d;
+    transition: color 0.3s ease;
+}
+
 .index-img {
     width: 100%;
     height: 100%;
