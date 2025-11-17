@@ -618,7 +618,7 @@ footer a:hover {
     border-right: 2px solid #000;
     border-bottom: 2px solid #000;
     border-left: 1px solid #000;
-    
+
 }
 
 .activeDropdownButton svg {
@@ -999,18 +999,66 @@ footer a:hover {
 .containers-dropdown {
     display: none;
     background: hsla(212, 81%, 29%, 0.199);
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 300px;
 }
 
 .tools-dropdown {
     display: none;
     background: #817e9f4e;
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 300px;
 }
 
 .furniture-dropdown {
     display: none;
     background: #394f4930;
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 300px;
 }
 
 .activeDropdown {
-    display: block !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.collections-section{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: wrap;    
+}
+
+
+
+/* Smooth dropdown animation */
+.containers-dropdown,
+.tools-dropdown,
+.furniture-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 0;
+    overflow: auto;
+    opacity: 0;
+    transition: max-height 420ms cubic-bezier(.2,.9,.2,1), opacity 260ms ease, transform 300ms cubic-bezier(.2,.9,.2,1);
+}
+.activeDropdown {
+    max-height: 400px;
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+
+    .activeDropdown {
+        width: 94%;
+        padding: 28px;
+        font-size: 20px;
+    }
+
 }

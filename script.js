@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	
+
 	// -------------------Nav Bar Functionality------------------- //
 	const icons = document.querySelectorAll('.nav-icon');
 	let isScrollingFromClick = false;
@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Function to check if header is off-screen and adjust icon-nav position
 	function updateIconNavPosition() {
 		if (!iconNav || !header) return;
-		
+
 		const headerRect = header.getBoundingClientRect();
 		const isHeaderOffScreen = headerRect.bottom < 0;
-		
+
 		if (isHeaderOffScreen) {
 			iconNav.classList.add('centered');
 		} else {
@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const iconNavToggle = document.getElementById('icon-nav-toggle');
 	if (iconNavToggle) {
-		iconNavToggle.addEventListener('click', function() {
+		iconNavToggle.addEventListener('click', function () {
 			if (iconNav) {
 				iconNav.classList.toggle('mobile-open');
 				iconNavToggle.classList.toggle('active');
 			}
 		});
 
-		document.addEventListener('click', function(e) {
+		document.addEventListener('click', function (e) {
 			if (iconNav && window.innerWidth <= 900) {
 				if (!e.target.closest('#icon-nav') && !e.target.closest('#icon-nav-toggle')) {
 					iconNav.classList.remove('mobile-open');
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 							const iconHeight = i.offsetHeight;
 							const containerHeight = iconNavContainer.clientHeight;
 							const scrollTop = iconNavContainer.scrollTop;
-							
+
 							if (iconTop < scrollTop) {
 								iconNavContainer.scrollTo({
 									top: iconTop - 10,
@@ -105,6 +105,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// -------------------Collections Functionality ------------------- //
+	// get dropdown item index cards
+	const dropdownItems = document.querySelectorAll('.index-card');
+	let containerItems = [];
+	let toolItems = [];
+	let furnitureItems = [];
+	dropdownItems.forEach(item => {
+		if (item.dataset.category === 'containers') {
+			containerItems.push(item);
+			console.log("Container item:", item);
+		} else if (item.dataset.category === 'tools') {
+			toolItems.push(item);
+			console.log("Tool item:", item);
+		} else if (item.dataset.category === 'furniture') {
+			furnitureItems.push(item);
+			console.log("Furniture item:", item);
+		}
+	});
 	const collectionButtons = document.querySelectorAll('.collection-button');
 	const allItems = document.querySelectorAll('.index-card');
 	const collections = {
@@ -114,29 +131,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 	//collection button click listener
 	collectionButtons.forEach(button => {
-		button.addEventListener('click', function() {
+		button.addEventListener('click', function () {
 			// Toggle the corresponding dropdown
-			if(this.classList.contains('containers-collection')) { // containers dropdown
+			if (this.classList.contains('containers-collection')) { // containers dropdown
 				const currentDropdown = document.querySelector('.containers-dropdown');
-				if(currentDropdown.classList.contains('activeDropdown')) {
+				if (currentDropdown.classList.contains('activeDropdown')) {
 					currentDropdown.classList.remove('activeDropdown');
 					this.classList.remove('activeDropdownButton');
+
 				} else {
 					currentDropdown.classList.add('activeDropdown');
 					this.classList.add('activeDropdownButton');
 				}
-			} else if(this.classList.contains('tools-collection')) { // tools dropdown
+			} else if (this.classList.contains('tools-collection')) { // tools dropdown
 				const currentDropdown = document.querySelector('.tools-dropdown');
-				if(currentDropdown.classList.contains('activeDropdown')) {
+				if (currentDropdown.classList.contains('activeDropdown')) {
 					currentDropdown.classList.remove('activeDropdown');
 					this.classList.remove('activeDropdownButton');
 				} else {
 					currentDropdown.classList.add('activeDropdown');
 					this.classList.add('activeDropdownButton');
 				}
-			} else if(this.classList.contains('furniture-collection')) { // furniture dropdown
+			} else if (this.classList.contains('furniture-collection')) { // furniture dropdown
 				const currentDropdown = document.querySelector('.furniture-dropdown');
-				if(currentDropdown.classList.contains('activeDropdown')) {
+				if (currentDropdown.classList.contains('activeDropdown')) {
 					currentDropdown.classList.remove('activeDropdown');
 					this.classList.remove('activeDropdownButton');
 				} else {
@@ -145,6 +163,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 		});
-
 	});
+
 });
