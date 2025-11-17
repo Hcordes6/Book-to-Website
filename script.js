@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+	
+	// -------------------Nav Bar Functionality------------------- //
 	const icons = document.querySelectorAll('.nav-icon');
 	let isScrollingFromClick = false;
 	const iconNav = document.getElementById('icon-nav');
@@ -101,5 +103,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		sections.forEach(s => observer.observe(s));
 	}
-});
 
+	// -------------------Collections Functionality ------------------- //
+	const collectionButtons = document.querySelectorAll('.collection-button');
+	const allItems = document.querySelectorAll('.index-card');
+	const collections = {
+		'containers-collection': 'containers-dropdown',
+		'tools-collection': 'tools-dropdown',
+		'furniture-collection': 'furniture-dropdown'
+	};
+	//collection button click listener
+	collectionButtons.forEach(button => {
+		button.addEventListener('click', function() {
+			// Toggle the corresponding dropdown
+			if(this.classList.contains('containers-collection')) { // containers dropdown
+				const currentDropdown = document.querySelector('.containers-dropdown');
+				if(currentDropdown.classList.contains('activeDropdown')) {
+					currentDropdown.classList.remove('activeDropdown');
+					this.classList.remove('activeDropdownButton');
+				} else {
+					currentDropdown.classList.add('activeDropdown');
+					this.classList.add('activeDropdownButton');
+				}
+			} else if(this.classList.contains('tools-collection')) { // tools dropdown
+				const currentDropdown = document.querySelector('.tools-dropdown');
+				if(currentDropdown.classList.contains('activeDropdown')) {
+					currentDropdown.classList.remove('activeDropdown');
+					this.classList.remove('activeDropdownButton');
+				} else {
+					currentDropdown.classList.add('activeDropdown');
+					this.classList.add('activeDropdownButton');
+				}
+			} else if(this.classList.contains('furniture-collection')) { // furniture dropdown
+				const currentDropdown = document.querySelector('.furniture-dropdown');
+				if(currentDropdown.classList.contains('activeDropdown')) {
+					currentDropdown.classList.remove('activeDropdown');
+					this.classList.remove('activeDropdownButton');
+				} else {
+					currentDropdown.classList.add('activeDropdown');
+					this.classList.add('activeDropdownButton');
+				}
+			}
+		});
+
+	});
+});

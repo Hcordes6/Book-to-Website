@@ -423,6 +423,7 @@ nav div a:hover {
 .spacing {
     margin-bottom: 30px;
 }
+
 .authors-text {
     width: auto;
     font-size: 20px;
@@ -562,6 +563,7 @@ footer a:hover {
 
 /* Collection -------------------------------------------------------------- */
 
+
 .collections-outline {
     display: flex;
     gap: 30px;
@@ -598,34 +600,51 @@ footer a:hover {
     background: #394f496d;
 }
 
-.collection-button {
+.collections-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.collection-button {
+    margin-top: 50px;
+    margin: 0 auto;
     background: #F0EAD6;
     color: #F8F8F6;
-    font-size: 24px;
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    font-weight: 700;
     border: none;
     cursor: pointer;
-    margin-top: 50px;
     border-top: 1px solid #000;
     border-right: 2px solid #000;
     border-bottom: 2px solid #000;
     border-left: 1px solid #000;
-    box-shadow: 5px 6px 4px 0 rgba(0, 0, 0, 0.25);
+    
 }
 
+.activeDropdownButton svg {
+    transform: rotate(90deg);
+    transition: ease 0.3s;
+}
+
+.collection-button-style {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 24px;
+    width: 80%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    font-weight: 700;
+    box-shadow: 5px 6px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 .collection-button svg {
     width: 50px;
     height: 50px;
     flex: 0 0 auto;
+    transition: ease 0.3s;
 }
 
 .containers-collection {
@@ -790,15 +809,18 @@ footer a:hover {
     nav {
         flex-direction: column;
     }
+
     #authors {
         padding: 50px 20px;
     }
+
     .authors-img {
         float: none;
         width: 100%;
         max-width: none;
         margin: 0 0 16px 0;
     }
+
     .authors-text {
         width: 100%;
     }
@@ -961,4 +983,34 @@ footer a:hover {
     #icon-nav.mobile-open.centered {
         transform: translateX(0) translateY(-50%);
     }
+}
+
+
+/* Collections JS update */
+.collections-section {
+    display: none;
+}
+
+.collections-section.active {
+    display: block;
+}
+
+
+.containers-dropdown {
+    display: none;
+    background: hsla(212, 81%, 29%, 0.199);
+}
+
+.tools-dropdown {
+    display: none;
+    background: #817e9f4e;
+}
+
+.furniture-dropdown {
+    display: none;
+    background: #394f4930;
+}
+
+.activeDropdown {
+    display: block !important;
 }
